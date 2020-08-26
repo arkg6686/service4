@@ -1,5 +1,4 @@
- 
-name: Deploy to Cloudflare Workers
+ name: Deploy to Cloudflare Workers
 
 on:
   push:
@@ -14,9 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Publish
-        uses: cloudflare/wrangler-action@1.2.0
+        uses = "arunaimtell/service4@master"
         with:
           apiToken: ${{ secrets.TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd }}
         env:
           CF_ACCOUNT_ID: ${{secrets.a43fcfd4ab6dc2808fde2b85e2f4a8b0}}
-}
