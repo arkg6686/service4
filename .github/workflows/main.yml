@@ -1,4 +1,3 @@
- 
 name: Deploy to Cloudflare Workers
 
 on:
@@ -19,4 +18,3 @@ jobs:
           apiToken: ${{ secrets.TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd }}
         env:
           CF_ACCOUNT_ID: ${{secrets.a43fcfd4ab6dc2808fde2b85e2f4a8b0}}
-}
