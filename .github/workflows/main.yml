@@ -28,7 +28,6 @@ jobs:
       with:
          apiToken: ${{ secrets.TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd }}
       env:
-         CF_ACCOUNT_ID: ${{ secrets.a43fcfd4ab6dc2808fde2b85e2f4a8b0 }}
-         CF_AUTH_EMAIL : ${{ secrets.arun@aimtell.com}}
-         CF_SCRIPT_NAME : ${{secrets.worker-script}}
+         CLOUDFLARE_EMAIL: ${{ secrets.arun@aimtell.com }}
+         CLOUDFLARE_KEY: ${{ secrets.02de42f7e5ca2e1b48e8d5cc2e3bf112bb430 }}
        
