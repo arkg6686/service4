@@ -25,7 +25,6 @@ jobs:
     # Runs a single command using the runners shell
     - name: Moving worker script
       uses: cloudflare/wrangler-action@1.2.0
-      run: worker-script.js
       with:
          apiToken: ${{ secrets.TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd }}
       env:
