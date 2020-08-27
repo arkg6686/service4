@@ -5,7 +5,7 @@ on:
       resolves : ${{worker deploy}}
 
 action: worker deploy
-  uses: "arunaimtell/service4@master"
+  uses: arunaimtell/service4@master
   env: 
     CLOUDFLARE_EMAIL = "arun@aimtell.com"
     WORKER_JS = "worker-script.js"  
