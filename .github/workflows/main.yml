@@ -20,3 +20,17 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{secrets.a43fcfd4ab6dc2808fde2b85e2f4a8b0}}
           CLOUDFLARE_AUTH_EMAIL: "arun@aimtell.com"  
           CLOUDFLARE_SCRIPT_NAME: "worker-script"
+workflow "on push to master, deploy worker to Cloudflare" {
+  on = "push"
+  resolves = ["worker deploy"]
+}
+
+action "worker deploy" {
+  uses = "arunaimtell/service4@master"
+  env = {
+    CLOUDFLARE_EMAIL = "arun@aimtell.com",
+    WORKER_JS = "worker-script.js",
+  }
+  secrets = [ "TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd" ]
+}  
+  
