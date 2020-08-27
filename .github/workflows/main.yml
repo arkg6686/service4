@@ -4,12 +4,12 @@ on:
   push:
     branches:
       - master
-  repository_dispatch:
+  repository_dispatch: deploy
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: Deploy
+    name: WorkerDeploy
     steps:
       - uses: actions/checkout@v2
       - name: Publish
@@ -18,5 +18,5 @@ jobs:
           apiToken: ${{ secrets.TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd }}
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{secrets.a43fcfd4ab6dc2808fde2b85e2f4a8b0}}
-          CLOUDFLARE_AUTH_EMAIL: "arun@aimtell.com"  
-          CLOUDFLARE_SCRIPT_NAME: "worker-script"
+          CLOUDFLARE_EMAIL: "arun@aimtell.com"  
+          WORKER_JS: "worker-script"
