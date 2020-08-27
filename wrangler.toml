@@ -1,0 +1,4 @@
+type = "webpack"
+name = "my-worker"
+account_id = "a43fcfd4ab6dc2808fde2b85e2f4a8b0"
+workers_dev = true
