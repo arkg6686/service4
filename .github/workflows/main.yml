@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-  repository_dispatch: deploy
+  repository_dispatch: 
 
 jobs:
   deploy:
@@ -19,4 +19,4 @@ jobs:
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{secrets.a43fcfd4ab6dc2808fde2b85e2f4a8b0}}
           CLOUDFLARE_EMAIL: "arun@aimtell.com"  
-          WORKER_JS: "worker-script"
+          WORKER_JS: "worker-script.js"
