@@ -1,36 +1,15 @@
-name: Deploy to Cloudflare Workers
 
-on:
-  push:
-    branches:
-      - master
-  repository_dispatch:
+name: on push to master, deploy worker to Cloudflare
+  on: 
+    push:
+      resolves : ${{worker deploy}}
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - uses: actions/checkout@v2
-      - name: Publish
-        uses: "arunaimtell/service4@master"
-        with:
-          apiToken: ${{ secrets.TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd }}
-        env:
-          CLOUDFLARE_ACCOUNT_ID: ${{secrets.a43fcfd4ab6dc2808fde2b85e2f4a8b0}}
-          CLOUDFLARE_AUTH_EMAIL: "arun@aimtell.com"  
-          CLOUDFLARE_SCRIPT_NAME: "worker-script"
-workflow "on push to master, deploy worker to Cloudflare" {
-  on = "push"
-  resolves = ["worker deploy"]
-}
-
-action "worker deploy" {
-  uses = "arunaimtell/service4@master"
-  env = {
-    CLOUDFLARE_EMAIL = "arun@aimtell.com",
-    WORKER_JS = "worker-script.js",
-  }
-  secrets = [ "TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd" ]
-}  
+action : worker deploy
+  uses : "arunaimtell/service4@master"
+  env : 
+    CLOUDFLARE_EMAIL = "arun@aimtell.com"
+    WORKER_JS = "worker-script.js"
+  
+  secrets: ${{"TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd"}}
+ 
   
