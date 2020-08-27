@@ -14,7 +14,8 @@ jobs:
       - name: Publish
         uses: cloudflare/wrangler-action@1.2.0
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          apiKey: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
           email: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }} 
         env:
           CLOUDFLARE_AUTH_EMAIL: "arun@aimtell.com"
@@ -22,3 +23,4 @@ jobs:
           CLOUDFLARE_ZONE_ID: ''
           CLOUDFLARE_AUTH_KEY: "02de42f7e5ca2e1b48e8d5cc2e3bf112bb430"
           CLOUDFLARE_SCRIPT_NAME: "worker-script"
+          CLOUDFLARE_API_TOKEN: "TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd"
