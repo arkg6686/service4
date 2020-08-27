@@ -18,5 +18,5 @@ jobs:
           apiToken: ${{ secrets.TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd }}
         env:
           CF_ACCOUNT_ID: ${{secrets.a43fcfd4ab6dc2808fde2b85e2f4a8b0}}
-          CF_AUTH_EMAIL: ${{secrets.arun@aimtell.com}}  
-          SCRIPT_NAME: ${{secrets.worker-script}}
+          CF_AUTH_EMAIL: "arun@aimtell.com"  
+          CF_SCRIPT_NAME: ${{secrets.worker-script}}
