@@ -1,15 +1,14 @@
 
 name: on push to master, deploy worker to Cloudflare
-  on: 
-    push:
+on: 
+  push:
       resolves : ${{worker deploy}}
 
-action : worker deploy
-  uses : "arunaimtell/service4@master"
+action: worker deploy
+  uses: "arunaimtell/service4@master"
   env : 
     CLOUDFLARE_EMAIL = "arun@aimtell.com"
-    WORKER_JS = "worker-script.js"
-  
+    WORKER_JS = "worker-script.js"  
   secrets: ${{"TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd"}}
  
   
