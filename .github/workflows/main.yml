@@ -16,6 +16,6 @@ jobs:
         with:
           apiToken: ${{ secrets.TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd }}
         env:
-          CLOUDFLARE_ACCOUNT_ID: "a43fcfd4ab6dc2808fde2b85e2f4a8b0"
-          CLOUDFLARE_AUTH_EMAIL: "arun@aimtell.com"
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.a43fcfd4ab6dc2808fde2b85e2f4a8b0}}
+          email: ${{ secrets.arun@aimtell.com }}
           CLOUDFLARE_SCRIPT_NAME: "worker-script"
