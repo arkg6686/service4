@@ -4,18 +4,18 @@ on:
   push:
     branches:
       - master
-  repository_dispatch: 
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    name: WorkerDeploy
+    name: Deploy
     steps:
+      - uses: actions/checkout@v2
       - name: Publish
-        uses: arunaimtell/service4@master
+		uses: cloudflare/wrangler-action@1.2.0
         with:
           apiToken: ${{ secrets.TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd }}
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{secrets.a43fcfd4ab6dc2808fde2b85e2f4a8b0}}
-          CLOUDFLARE_EMAIL: "arun@aimtell.com"  
-          WORKER_JS: "worker-script.js"
+          CLOUDFLARE_EMAIL: arun@aimtell.com
+          WORKER_JS: worker-script.js
