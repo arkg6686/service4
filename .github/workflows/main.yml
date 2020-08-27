@@ -11,9 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     name: WorkerDeploy
     steps:
-      - uses: actions/checkout@v2
       - name: Publish
-        uses: "arunaimtell/service4@master"
+        uses: arunaimtell/service4@master
         with:
           apiToken: ${{ secrets.TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd }}
         env:
