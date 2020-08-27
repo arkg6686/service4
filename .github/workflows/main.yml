@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Publish
-        uses: arunaimtell/service4@master
+        uses: cloudflare/wrangler-action@1.2.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           apiKey: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
