@@ -1,4 +1,5 @@
 {
-  "name": "myapp",
+  "name": "myworker",
   "version": "0.0.1"
+  "entry": "worker-script.js",
 }  
