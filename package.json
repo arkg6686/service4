@@ -1,5 +1,6 @@
 {
   "name": "my-worker",
   "version": "0.0.1",
-  "entry": "./index.js"
+  "entry": "./index.js",
+  "main": "./index.js"
 }  
