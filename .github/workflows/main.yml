@@ -17,10 +17,4 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           apiKey: ${{ secrets.CLOUDFLARE_AUTH_KEY }}
           email: ${{ secrets.CLOUDFLARE_AUTH_EMAIL }} 
-        env:
-          CLOUDFLARE_AUTH_EMAIL: "arun@aimtell.com"
-          CLOUDFLARE_ACCOUNT_ID: "a43fcfd4ab6dc2808fde2b85e2f4a8b0"
-          CLOUDFLARE_ZONE_ID: ''
-          CLOUDFLARE_AUTH_KEY: "02de42f7e5ca2e1b48e8d5cc2e3bf112bb430"
-          CLOUDFLARE_SCRIPT_NAME: "index"
-          CLOUDFLARE_API_TOKEN: "TuAjgUBkJbcvW0t6IhpgOmQNrVkwmbsG_3hevDtd"
+     
